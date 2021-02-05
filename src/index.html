@@ -25,6 +25,11 @@
          document.body.classList.remove("mouse-navigation");
        }
      });
+     window.addEventListener("click", function(e) {
+       if(e.target.tagName === "A" && e.target.getAttribute("href") === "#") {
+         e.preventDefault();
+       }
+     });
    </script> 
   </body>
 </html>
